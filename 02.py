@@ -1,22 +1,30 @@
-tuple = (1, 2)
-list = [1, 2]
-dict = {
-    'name':'Seungdae Lee',
-    'age':'20'
-}
+file_test = open('sample.txt', 'rt') 
 
-x, y = tuple
+ 
+print type(file_test)
+print file_test
 
-print "Start out"
-print tuple
-print x
-print y
-print dict
+lines = file_test.readlines()
 
-with open('sample.txt', 'rt') as f:
-    data = f.read()
-    print data
+print type(lines)
+print lines[1: 3]
+print len(lines[1:2])
 
-if False:
-    print 'hello 1'
-print 'hello 2'
+range_1 = range(100, 105)
+print type(range_1)
+print range_1
+
+ 
+for number in range_1:
+    print number
+
+ 
+for line in lines:
+    print line
+
+#print type(line)
+
+#if isinstance(line, str) and '@' in str
+#    print line
+
+
